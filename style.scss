@@ -1,0 +1,164 @@
+@import"compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+//font-family
+$baseFontFamily:"游ゴシック",YuGothic,"メイリオ",Verdana,"Hiragono Kaku Gothic ProN",Meiryo,sans-serif;
+
+//colors
+$baseColor:#fdfcf6;
+$subColor:#ff99cc;
+$keyColor:#ff0066;
+$fontColor:#4c4c4c;
+
+
+/*Base
+------------------------------------------------------------*/
+html{ font-size:62.5%; }
+
+body{
+  color:$fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color:$baseColor;
+}
+
+/*font
+------------------------------------------*/
+.abel{
+  font-family:'Abel', sans-serif;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+
+
+a{
+  @include link-colors($keyColor,darken($keyColor, 10%), lighten($keyColor,5%),darken($keyColor,10%));
+  text-decoration: none;
+}
+
+/*Align
+-------------------------------------------*/
+.text-center{
+  text-align: center;
+}
+
+/*layout
+-------------------------------------------*/
+.block-center{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+header{
+    #top{
+     text-align:center;   
+    }
+    .top-pic{
+      background-image: url(./images/img_sakura_1.jpg);
+      height:500px;
+      width:100%;
+      background-size:cover;
+      background-position: center center;
+    }
+    .top-title{
+      font-size: 3.0rem;
+      color:$keyColor;
+    }
+}
+
+p{
+  font-size:1.6rem;
+}
+
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+}
+
+//flowers
+#flowers{
+  background-color: $baseColor;
+  text-align:center;
+  
+  
+  .container{
+    @include display-flex;
+    justify-content: space-between;
+    
+  }
+  
+  h3{
+    color: $fontColor;
+    margin-bottom: 10px;
+  }
+  
+  .flower-pic{
+    width:150px;
+    height:150px;
+  }
+  .flower-box{
+    @include flex(1);
+    margin: 10px 10px;
+    background-color:$subColor;
+}
+}
+
+
+@media(max-width: 768px){
+  #flowers{
+    .container{
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+/*contact
+-----------------------------------------------------------*/
+#contact{
+
+    text-align: center; 
+  
+  h2{
+    text-align:center;
+    font-size:2.5rem;
+  }
+  .button-contact{
+  display:inline-block;
+  width: 180px;
+  height: 20px;
+  margin:40px;
+  padding:20px;
+  font-size:1.5rem;
+  vertical-align: middle;
+  text-align: center;
+  background-color: $subColor;
+  border-radius: 10px;
+  }
+}
+
+
+
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+
+
