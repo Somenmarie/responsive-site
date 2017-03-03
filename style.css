@@ -45,7 +45,8 @@ a {
 
 header #top {
   text-align: center; }
-header .top-pic {
+header .top-box {
+  background-image: url(./images/img_sakura_1.jpg);
   height: 500px;
   width: 100%;
   background-size: cover;
@@ -57,6 +58,9 @@ header .top-title {
 p {
   font-size: 1.6rem; }
 
+@media (max-width: 768px) {
+  .top-box {
+    height: 250px; } }
 /* Contents
 ------------------------------------------------------------*/
 section {
@@ -75,8 +79,7 @@ section {
     color: #4c4c4c;
     margin-bottom: 10px; }
   #flowers .flower-pic {
-    width: 150px;
-    height: 150px; }
+    max-width: 100%; }
   #flowers .flower-box {
     -webkit-flex: 1;
     flex: 1;
