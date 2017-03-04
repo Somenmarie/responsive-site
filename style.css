@@ -11,7 +11,8 @@ body {
   font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragono Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.6;
   letter-spacing: 0.1em;
-  background-color: #fdfcf6; }
+  background-color: #fdfcf6;
+  margin: 0; }
 
 /*font
 ------------------------------------------*/
@@ -59,12 +60,12 @@ p {
   font-size: 1.6rem; }
 
 @media (max-width: 768px) {
-  .top-box {
+  header .top-box {
     height: 250px; } }
 /* Contents
 ------------------------------------------------------------*/
 section {
-  padding: 60px 0; }
+  padding: 30px 0; }
   section .container {
     width: 90%; }
 
